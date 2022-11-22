@@ -776,10 +776,24 @@ button,
   overflow: hidden;
 }
 
-.form input[type=checkbox] + span > svg {
+.form svg {
   margin-top: 4px;
   margin-left: 2px;
   display: none;
+}
+
+.form input[type=checkbox] {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  border: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(100%);
+  clip-path: inset(100%);
 }
 
 .modal {
@@ -909,7 +923,7 @@ button,
   opacity: 0.6;
 }
 
-.modal__title {
+.modal__content h2 {
   margin: 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
@@ -919,7 +933,7 @@ button,
   margin-bottom: 15px;
 }
 
-.modal__slogan {
+.modal__content p {
   margin: 0;
   color: #ffffff;
   width: 400px;
@@ -977,7 +991,7 @@ button,
   border-color: #041427;
 }
 
-.modal__form label > span svg {
+.modal__form svg {
   fill: none;
   stroke: #ffffff;
 }
@@ -986,9 +1000,9 @@ button,
   border-color: #041427;
 }
 
-.modal__form label:hover > span svg,
-.modal__form label:focus > span svg,
-.modal__form label:focus-within > span svg {
+.modal__form label:hover svg,
+.modal__form label:focus svg,
+.modal__form label:focus-within svg {
   stroke: #041427;
 }
 
@@ -1008,10 +1022,6 @@ button,
 .main-header {
   position: relative;
   z-index: 5;
-}
-
-.main-header__wrapper {
-  position: relative;
   padding-top: 30px;
   padding-bottom: 15px;
   padding-left: 18.2291666667%;
@@ -1019,7 +1029,7 @@ button,
   background-color: #041427;
 }
 
-.main-header__wrapper::after {
+.main-header::after {
   position: absolute;
   content: "";
   width: 100%;
@@ -1193,7 +1203,7 @@ button,
   min-width: 320px;
 }
 
-.main-footer__title {
+.main-footer__heading-container h3 {
   color: #ffffff;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-size: 15px;
@@ -1211,10 +1221,7 @@ button,
   grid-column-end: 3;
 }
 
-.main-footer__container {
-  max-width: 1220px;
-  min-width: 270px;
-  margin: 0 auto;
+.main-footer__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1431,7 +1438,7 @@ button,
   padding-left: 125px;
 }
 
-.major-block__title {
+.major-block__wrapper h2 {
   margin: 0;
   font-size: 80px;
   line-height: 90px;
@@ -1442,11 +1449,11 @@ button,
   letter-spacing: 0.07em;
 }
 
-.major-block__title br {
+.major-block__wrapper br {
   display: none;
 }
 
-.major-block__description {
+.major-block__wrapper p {
   margin: 0;
   font-size: 22px;
   line-height: 34px;
@@ -1489,7 +1496,7 @@ button,
   display: none;
 }
 
-.advantages__container {
+.advantages {
   padding-top: 120px;
   padding-bottom: 60px;
 }
@@ -1529,7 +1536,7 @@ button,
   height: auto;
 }
 
-.advantages__card-title {
+.advantages__card h3 {
   color: #00b2ff;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
@@ -1540,7 +1547,7 @@ button,
   margin-top: 3.9603960396%;
 }
 
-.advantages__card-description {
+.advantages__card p {
   margin: 0;
 }
 
@@ -1549,8 +1556,8 @@ button,
   border-color: #00b2ff;
 }
 
-.advantages__card:hover .advantages__card-description,
-.advantages__card:hover .advantages__card-title {
+.advantages__card:hover p,
+.advantages__card:hover h3 {
   color: #f2f5f7;
 }
 
@@ -1559,14 +1566,14 @@ button,
   fill: #f2f5f6;
 }
 
-.feed-back__container {
+.feed-back {
   background-color: #00b2ff;
   position: relative;
   padding-top: 170px;
   padding-bottom: 250px;
 }
 
-.feed-back__container::after {
+.feed-back::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -1597,7 +1604,7 @@ button,
   margin-top: 77px;
 }
 
-.feed-back__title {
+.feed-back__group h2 {
   margin: 0;
   color: #ffffff;
   font-family: "Roboto Condensed", "Arial", sans-serif;
@@ -1607,7 +1614,7 @@ button,
   margin-bottom: 2.5862068966%;
 }
 
-.feed-back__slogan {
+.feed-back__group p {
   margin: 0;
   color: #ffffff;
   margin-bottom: 6.0344827586%;
@@ -1678,14 +1685,14 @@ button,
   border-color: #041427;
 }
 
-.feed-back__form label > span svg {
+.feed-back__form svg {
   fill: none;
   stroke: #ffffff;
 }
 
-.feed-back__form label:hover > span svg,
-.feed-back__form label:focus > span svg,
-.feed-back__form label:focus-within > span svg {
+.feed-back__form label:hover svg,
+.feed-back__form label:focus svg,
+.feed-back__form label:focus-within svg {
   stroke: #041427;
 }
 
@@ -1702,7 +1709,7 @@ button,
   display: block;
 }
 
-.about__container {
+.about {
   padding-top: 60px;
   padding-bottom: 100px;
 }
@@ -1714,7 +1721,7 @@ button,
   grid-template-columns: 12.2950819672% 8.1967213115% 79.5081967213%;
 }
 
-.about__picture {
+.about__wrapper img {
   width: 100%;
   height: auto;
 }
@@ -1726,7 +1733,7 @@ button,
   grid-column-end: 4;
 }
 
-.about__title {
+.about__group h2 {
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
@@ -1781,13 +1788,13 @@ button,
   display: none;
 }
 
-.products__container {
+.products {
   background-color: #041827;
   padding-top: 70px;
   padding-bottom: 140px;
 }
 
-.products__title {
+.products__wrapper h2 {
   margin: 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
@@ -1850,7 +1857,7 @@ button,
   background-image: url("../img/product-card-desktop-3.jpg");
 }
 
-.products__card-title {
+.products__card h3 {
   margin: 0;
   font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 400;
@@ -1921,7 +1928,7 @@ button,
     padding-right: 18.2291666667%;
   }
 
-  .main-header__wrapper {
+  .main-header {
     padding-top: 1.5625%;
     padding-bottom: 0.78125%;
   }
@@ -1961,7 +1968,7 @@ button,
     padding: 2.6041666667% 18.2291666667% 2.8645833333%;
   }
 
-  .main-footer__title {
+  .main-footer__heading-container h3 {
     font-size: 0.78125vw;
     line-height: 1.0416666667vw;
   }
@@ -2003,12 +2010,12 @@ button,
     padding-left: 10.2459016393%;
   }
 
-  .major-block__title {
+  .major-block__wrapper h2 {
     font-size: 4.1666666667vw;
     line-height: 4.6875vw;
   }
 
-  .major-block__description {
+  .major-block__wrapper p {
     font-size: 1.1458333333vw;
     line-height: 1.7708333333vw;
   }
@@ -2018,7 +2025,7 @@ button,
     line-height: 1.09375vw;
   }
 
-  .advantages__container {
+  .advantages {
     padding-top: 6.25%;
     padding-bottom: 3.125%;
   }
@@ -2031,17 +2038,17 @@ button,
     min-height: 15.625vw;
   }
 
-  .advantages__card-title {
+  .advantages__card h3 {
     font-size: 1.25vw;
     line-height: 1.3020833333vw;
   }
 
-  .advantages__card-description {
+  .advantages__card p {
     font-size: 0.8333333333vw;
     line-height: 1.09375vw;
   }
 
-  .feed-back__container {
+  .feed-back {
     padding-top: 8.8541666667%;
     padding-bottom: 13.0208333333%;
   }
@@ -2056,12 +2063,12 @@ button,
     margin-top: 15.0980392157%;
   }
 
-  .feed-back__title {
+  .feed-back__group h2 {
     font-size: 1.875vw;
     line-height: 2.65625vw;
   }
 
-  .feed-back__slogan {
+  .feed-back__group p {
     font-size: 0.8333333333vw;
     line-height: 1.1458333333vw;
   }
@@ -2093,6 +2100,13 @@ button,
     line-height: 0.78125vw;
   }
 
+  .feed-back__form svg {
+    margin: 0;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    align-self: center;
+  }
+
   .feed-back__form input[type=checkbox] + span {
     width: 5.7692307692%;
     height: 0.78125vw;
@@ -2100,19 +2114,12 @@ button,
     justify-content: space-around;
   }
 
-  .feed-back__form input[type=checkbox] + span > svg {
-    margin: 0;
-    -ms-flex-item-align: center;
-    -ms-grid-row-align: center;
-    align-self: center;
-  }
-
-  .about__container {
+  .about {
     padding-top: 3.125%;
     padding-bottom: 5.2083333333%;
   }
 
-  .about__title {
+  .about__group h2 {
     font-size: 1.8759770714vw;
     line-height: 2.6576341845vw;
     margin-bottom: 1.5463917526%;
@@ -2131,12 +2138,12 @@ button,
     margin-top: 4.1237113402%;
   }
 
-  .products__container {
+  .products {
     padding-top: 3.6458333333%;
     padding-bottom: 7.2916666667%;
   }
 
-  .products__title {
+  .products__wrapper h2 {
     font-size: 1.875vw;
     line-height: 2.65625vw;
   }
@@ -2149,7 +2156,7 @@ button,
     min-height: 33.8541666667vw;
   }
 
-  .products__card-title {
+  .products__card h3 {
     font-size: 1.0416666667vw;
     line-height: 1.5625vw;
   }
@@ -2168,14 +2175,14 @@ button,
     padding-right: 6.4935064935%;
   }
 
-  .main-header__wrapper {
+  .main-header {
     padding-left: 6.4935064935%;
     padding-right: 9.0909090909%;
     padding-top: 2.5974025974%;
     padding-bottom: 1.2987012987%;
   }
 
-  .main-header__wrapper::after {
+  .main-header::after {
     height: 117.65%;
   }
 
@@ -2238,12 +2245,12 @@ button,
     padding: 6.4935064935% 6.4935064935% 9.0909090909%;
   }
 
-  .main-footer__title {
+  .main-footer__heading-container h3 {
     font-size: 1.9480519481vw;
     line-height: 2.0779220779vw;
   }
 
-  .main-footer__container {
+  .main-footer__wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
@@ -2343,13 +2350,13 @@ button,
     padding-left: 0;
   }
 
-  .major-block__title {
+  .major-block__wrapper h2 {
     font-size: 8.3116883117vw;
     line-height: 9.7402597403vw;
     margin-bottom: 0;
   }
 
-  .major-block__description {
+  .major-block__wrapper p {
     font-size: 2.8571428571vw;
     line-height: 4.4155844156vw;
     margin-bottom: 8.9552238806%;
@@ -2364,7 +2371,7 @@ button,
     margin-left: 6.7164179104%;
   }
 
-  .advantages__container {
+  .advantages {
     padding-top: 10.3896103896%;
     padding-bottom: 5.1948051948%;
   }
@@ -2388,24 +2395,24 @@ button,
     width: 14.2857142857%;
   }
 
-  .advantages__card-title {
+  .advantages__card h3 {
     margin-bottom: 6.1728395062%;
     margin-top: 8.2304526749%;
     font-size: 3.1168831169vw;
     line-height: 3.2467532468vw;
   }
 
-  .advantages__card-description {
+  .advantages__card p {
     font-size: 2.0779220779vw;
     line-height: 2.7272727273vw;
   }
 
-  .feed-back__container {
+  .feed-back {
     padding-top: 5.8441558442%;
     padding-bottom: 16.2337662338%;
   }
 
-  .feed-back__container::after {
+  .feed-back::after {
     display: none;
   }
 
@@ -2421,13 +2428,13 @@ button,
     display: none;
   }
 
-  .feed-back__title {
+  .feed-back__group h2 {
     font-size: 4.6753246753vw;
     line-height: 6.6233766234vw;
     margin-bottom: 1.4925373134%;
   }
 
-  .feed-back__slogan {
+  .feed-back__group p {
     font-size: 2.0779220779vw;
     line-height: 2.8571428571vw;
     margin-bottom: 3.7313432836%;
@@ -2472,14 +2479,7 @@ button,
     line-height: 1.9480519481vw;
   }
 
-  .feed-back__form input[type=checkbox] + span {
-    height: 1.9480519481vw;
-    -webkit-box-pack: start;
-    -ms-flex-pack: start;
-    justify-content: flex-start;
-  }
-
-  .feed-back__form input[type=checkbox] + span > svg {
+  .feed-back__form svg {
     -ms-flex-item-align: start;
     align-self: flex-start;
     margin-top: 30.7692307692%;
@@ -2488,7 +2488,14 @@ button,
     height: 30.7692307692%;
   }
 
-  .about__container {
+  .feed-back__form input[type=checkbox] + span {
+    height: 1.9480519481vw;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+  }
+
+  .about {
     padding-top: 4.5454545455%;
     padding-bottom: 10.3896103896%;
   }
@@ -2498,7 +2505,7 @@ button,
     grid-template-columns: 22.3880597015% 3.7313432836% 73.6567164179%;
   }
 
-  .about__title {
+  .about__group h2 {
     font-size: 4.6753246753vw;
     line-height: 6.6233766234vw;
     margin-bottom: 2.0263424519%;
@@ -2517,12 +2524,12 @@ button,
     margin-top: 0;
   }
 
-  .products__container {
+  .products {
     padding-top: 7.1428571429%;
     padding-bottom: 9.7402597403%;
   }
 
-  .products__title {
+  .products__wrapper h2 {
     font-size: 4.6753246753vw;
     line-height: 6.6233766234vw;
     margin-bottom: 5.223880597%;
@@ -2546,7 +2553,7 @@ button,
     background-image: url("../img/product-card-tablet-2.jpg");
   }
 
-  .products__card--mounting .products__card-title br {
+  .products__card--mounting br {
     display: none;
   }
 
@@ -2554,7 +2561,7 @@ button,
     background-image: url("../img/product-card-tablet-3.jpg");
   }
 
-  .products__card-title {
+  .products__card h3 {
     font-size: 2.5974025974vw;
     line-height: 3.8961038961vw;
     margin-top: 5.9701492537%;
@@ -2611,7 +2618,7 @@ button,
     width: 100%;
   }
 
-  .main-header__wrapper {
+  .main-header {
     padding-left: 8.125%;
     padding-right: 10.9375%;
     padding-top: 4.6875%;
@@ -2619,7 +2626,7 @@ button,
     min-width: 320px;
   }
 
-  .main-header__wrapper::after {
+  .main-header::after {
     height: 116.67%;
   }
 
@@ -2649,7 +2656,7 @@ button,
     padding: 10.9375% 7.8125%;
   }
 
-  .main-footer__title {
+  .main-footer__heading-container h3 {
     font-size: 4.6875vw;
     line-height: 5vw;
   }
@@ -2796,17 +2803,17 @@ button,
     background-position: 20.5% 95%;
   }
 
-  .major-block__title {
+  .major-block__wrapper h2 {
     font-size: 11.25vw;
     line-height: 13.125vw;
     margin-bottom: 3.7037037037%;
   }
 
-  .major-block__title br {
+  .major-block__wrapper br {
     display: inline;
   }
 
-  .major-block__description {
+  .major-block__wrapper p {
     font-size: 4.375vw;
     line-height: 6.875vw;
     margin-bottom: 14.8148148148%;
@@ -2828,7 +2835,7 @@ button,
     display: inline;
   }
 
-  .advantages__container {
+  .advantages {
     padding-top: 15.625%;
     padding-bottom: 7.8125%;
   }
@@ -2856,30 +2863,30 @@ button,
     width: 14.2857142857%;
   }
 
-  .advantages__card-title {
+  .advantages__card h3 {
     margin-bottom: 2.8806584362%;
     margin-top: 6.1728395062%;
     font-size: 6.25vw;
     line-height: 8.75vw;
   }
 
-  .advantages__card-description {
+  .advantages__card p {
     font-size: 4.375vw;
     line-height: 5.9375vw;
   }
 
-  .feed-back__container {
+  .feed-back {
     padding-top: 15.625%;
     padding-bottom: 28.125%;
   }
 
-  .feed-back__title {
+  .feed-back__group h2 {
     font-size: 9.375vw;
     line-height: 13.125vw;
     margin-bottom: 3.7037037037%;
   }
 
-  .feed-back__slogan {
+  .feed-back__group p {
     font-size: 4.375vw;
     line-height: 5.9375vw;
     margin-bottom: 11.1111111111%;
@@ -2932,7 +2939,7 @@ button,
     height: 4.6875vw;
   }
 
-  .about__container {
+  .about {
     padding-top: 7.8125%;
     padding-bottom: 22.8125%;
   }
@@ -2941,14 +2948,14 @@ button,
     display: block;
   }
 
-  .about__title {
+  .about__wrapper img {
+    display: none;
+  }
+
+  .about__group h2 {
     font-size: 8.75vw;
     line-height: 12.1875vw;
     margin-bottom: 5.5555555556%;
-  }
-
-  .about__wrapper img {
-    display: none;
   }
 
   .about__group p {
@@ -2968,12 +2975,12 @@ button,
     display: none;
   }
 
-  .products__container {
+  .products {
     padding-top: 15.625%;
     padding-bottom: 26.875%;
   }
 
-  .products__title {
+  .products__wrapper h2 {
     font-size: 8.75vw;
     line-height: 12.1875vw;
     margin-bottom: 11.1111111111%;
@@ -3007,7 +3014,7 @@ button,
     background-image: url("../img/product-card-mobile-3.jpg");
   }
 
-  .products__card-title {
+  .products__card h3 {
     font-size: 5.625vw;
     line-height: 9.375vw;
     margin-top: 9.2592592593%;
@@ -3058,7 +3065,7 @@ button,
     padding: 35px 25px;
   }
 
-  .main-footer__title {
+  .main-footer__heading-container h3 {
     font-size: 15px;
     line-height: 16px;
   }
@@ -3094,12 +3101,12 @@ button,
     padding-bottom: 186px;
   }
 
-  .major-block__title {
+  .major-block__wrapper h2 {
     font-size: 36px;
     line-height: 42px;
   }
 
-  .major-block__description {
+  .major-block__wrapper p {
     font-size: 14px;
     line-height: 22px;
   }
@@ -3109,7 +3116,7 @@ button,
     line-height: 16px;
   }
 
-  .advantages__container {
+  .advantages {
     padding-top: 50px;
     padding-bottom: 25px;
   }
@@ -3126,27 +3133,27 @@ button,
     min-height: 325px;
   }
 
-  .advantages__card-title {
+  .advantages__card h3 {
     font-size: 20px;
     line-height: 28px;
   }
 
-  .advantages__card-description {
+  .advantages__card p {
     font-size: 14px;
     line-height: 19px;
   }
 
-  .feed-back__container {
+  .feed-back {
     padding-top: 45px;
     padding-bottom: 90px;
   }
 
-  .feed-back__title {
+  .feed-back__group h2 {
     font-size: 30px;
     line-height: 42px;
   }
 
-  .feed-back__slogan {
+  .feed-back__group p {
     font-size: 14px;
     line-height: 19px;
   }
@@ -3180,12 +3187,12 @@ button,
     height: 15px;
   }
 
-  .about__container {
+  .about {
     padding-top: 20px;
     padding-bottom: 73px;
   }
 
-  .about__title {
+  .about__group h2 {
     font-size: 28px;
     line-height: 39px;
   }
@@ -3200,12 +3207,12 @@ button,
     line-height: 16px;
   }
 
-  .products__container {
+  .products {
     padding-top: 50px;
     padding-bottom: 86px;
   }
 
-  .products__title {
+  .products__wrapper h2 {
     font-size: 28px;
     line-height: 39px;
   }
@@ -3218,7 +3225,7 @@ button,
     min-height: 250px;
   }
 
-  .products__card-title {
+  .products__card h3 {
     font-size: 18px;
     line-height: 30px;
   }
