@@ -951,6 +951,9 @@ button,
 }
 
 .modal__form label {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
   -ms-grid-column-align: center;
   justify-self: center;
   width: 395px;
@@ -962,6 +965,12 @@ button,
 
 .modal__form input[type=checkbox]:checked + span > svg {
   display: block;
+}
+
+.modal__form button {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .modal__form button:hover,
@@ -1360,6 +1369,10 @@ button,
   width: 69.7674418605%;
 }
 
+.social-list__item {
+  width: 26.6666666667%;
+}
+
 .social-list__link {
   padding: 12.5%;
   display: -webkit-box;
@@ -1369,10 +1382,6 @@ button,
 
 .social-list__link:active {
   opacity: 0.6;
-}
-
-.social-list__item {
-  width: 26.6666666667%;
 }
 
 .social-list__icon {
@@ -1471,7 +1480,7 @@ button,
   color: #f2f5f7;
   text-transform: uppercase;
   font-family: "Roboto Condensed", "Arial", sans-serif;
-  padding: 1.3698630137% 2.2831050228%;
+  padding: 1.3698630137% 1.3698630137%;
   background-color: #00b2ff;
   border-radius: 3px;
   text-align: center;
@@ -1580,7 +1589,7 @@ button,
   content: "";
   width: 100%;
   height: 100%;
-  background-color: #003a53;
+  background-color: rgba(4, 24, 39, 0.5);
   -webkit-clip-path: polygon(0% 100%, 50.5% 0%, 0% 0%);
   clip-path: polygon(0% 100%, 50.5% 0%, 0% 0%);
   z-index: 1;
@@ -1648,6 +1657,9 @@ button,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1;
 }
 
 .feed-back__form button:hover,
@@ -1662,6 +1674,9 @@ button,
 
 .feed-back__form label {
   width: 94.5454545455%;
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2;
   margin-left: 3.6363636364%;
   margin-top: 5.4545454545%;
   -ms-flex-item-align: start;
@@ -1922,6 +1937,24 @@ button,
   }
 */
 
+@media (-webkit-min-device-pixel-ratio: 2) and (min-width: 1024px), (-o-min-device-pixel-ratio: 2/1) and (min-width: 1024px), (min-resolution: 2dppx) and (min-width: 1024px) {
+  .major-block {
+    background-image: url("../img/main-background-desktop-2x.jpg");
+  }
+
+  .products__card--production {
+    background-image: url("../img/product-card-desktop-1-2x.jpg");
+  }
+
+  .products__card--mounting {
+    background-image: url("../img/product-card-desktop-2-2x.jpg");
+  }
+
+  .products__card--lighting {
+    background-image: url("../img/product-card-desktop-3-2x.jpg");
+  }
+}
+
 @media (max-width: 1919px) {
   .container {
     padding-left: 18.2291666667%;
@@ -1988,9 +2021,9 @@ button,
   }
 
   .social-list {
-    -webkit-column-gap: 0.78125vw;
-    -moz-column-gap: 0.78125vw;
-    column-gap: 0.78125vw;
+    -webkit-column-gap: 0.7291666667vw;
+    -moz-column-gap: 0.7291666667vw;
+    column-gap: 0.7291666667vw;
   }
 
   .contacts-list__item address {
@@ -3029,19 +3062,19 @@ button,
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
   .major-block {
-    background-image: url("../img/main-background-mobile-2x.jpg");
+    background-image: url("../img/main-background-mobile-2x.webp");
   }
 
   .products__card--production {
-    background-image: url("../img/product-card-mobile-1-2x.jpg");
+    background-image: url("../img/product-card-mobile-1-2x.webp");
   }
 
   .products__card--mounting {
-    background-image: url("../img/product-card-mobile-2-2x.jpg");
+    background-image: url("../img/product-card-mobile-2-2x.webp");
   }
 
   .products__card--lighting {
-    background-image: url("../img/product-card-mobile-3-2x.jpg");
+    background-image: url("../img/product-card-mobile-3-2x.webp");
   }
 }
 
@@ -3234,23 +3267,5 @@ button,
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
-  }
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
-  .major-block {
-    background-image: url("../img/main-background-desktop-2x.jpg");
-  }
-
-  .products__card--production {
-    background-image: url("../img/product-card-desktop-1-2x.jpg");
-  }
-
-  .products__card--mounting {
-    background-image: url("../img/product-card-desktop-2-2x.jpg");
-  }
-
-  .products__card--lighting {
-    background-image: url("../img/product-card-desktop-3-2x.jpg");
   }
 }
