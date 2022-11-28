@@ -16,12 +16,11 @@
   <link rel="preload" as="style" href="css/style.min.css">
   <title>Smart Device</title>
   <link rel="stylesheet" href="css/style.min.css">
-  
 </head>
 
 <body>
   <div class="wrapper">
-    <header class="header main-header">
+    <header class="header main-header" data-main-header>
       <h1 class="visually-hidden">Smart Device умные технологии</h1>
         <div class="main-header__container">
           <a class="main-header__logo">
@@ -57,7 +56,7 @@
           </nav>
         </div>
     </header>
-    <main>
+    <main data-main>
       <section class="major-block container">
         <div class="content-wrapper major-block__wrapper">
           <h2>Печатные<br> платы</h2>
@@ -130,7 +129,7 @@
             </picture>
             <div class="about__group">
               <h2>О компании</h2>
-              <div class="about__text">
+              <div class="about__text" data-about-text>
                 <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии
                   с
                   1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
@@ -144,7 +143,7 @@
                   </span>
                 </p>
               </div>
-              <div class="about__additional-text">
+              <div class="about__additional-text" data-additional-text>
                 <p>
                   Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых
                   продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и
@@ -157,7 +156,7 @@
                 </p>
               </div>
 
-              <button class="about__button" type="button">Подробнее</button>
+              <button class="about__button" data-about-button type="button">Подробнее</button>
             </div>
           </div>
       </section>
@@ -268,8 +267,8 @@
           </ul>
         </div>
         <div class="main-footer__group">
-          <div class="main-footer__sections-wrapper" role="navigation" aria-label="Дополнительное меню">
-            <div class="main-footer__heading-container">
+          <div class="main-footer__sections-wrapper" data-sections-wrapper role="navigation" aria-label="Дополнительное меню">
+            <div class="main-footer__heading-container" data-heading-container>
               <h3>Разделы сайта</h3>
               <button class="main-footer__button-sections main-footer__button-no-js" type="button"><span
                   class="visually-hidden">Открыть или закрыть разделы сайта.</span></button>
@@ -301,8 +300,8 @@
               </li>
             </ul>
           </div>
-          <div class="main-footer__contacts-wrapper" role="contentinfo">
-            <div class="main-footer__heading-container">
+          <div class="main-footer__contacts-wrapper" data-contacts-wrapper role="contentinfo">
+            <div class="main-footer__heading-container" data-heading-container>
               <h3>Наш офис</h3>
               <button class="main-footer__button-contacts main-footer__button-no-js" type="button"><span
                   class="visually-hidden">Открыть или
@@ -357,7 +356,6 @@
         </div>
       </div>
     </div>
-
   </div>
   <script src="js/main.min.js"></script>
 </body>
